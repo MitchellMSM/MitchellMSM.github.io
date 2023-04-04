@@ -69,8 +69,8 @@
             <button id="createbtn" class="btn btn-sm btn-danger">Create array int[]</button>
         
             Index:<input type="text" value="1" id="indextext"/>
-            Value:<input type="text" value="3" id="valuetxt" />
-            <button class="btn btn-sm btn-warning id=setbtn">Set Value</button>
+            Value:<input type="text" value="3" id="valuetext" />
+            <button class="btn btn-sm btn-warning" id="setbtn">Set Value</button>
         
         </div>
         <script>
@@ -80,14 +80,14 @@
                 let setbtn = document.querySelector("#setbtn");
                 setbtn.addEventListener("click", function (e)
                 {
-                    let ind = document.querySelector("#indextxt").value;
+                    let ind = document.querySelector("#indextext").value;
                     ind = Number(ind);
                     let val = document.querySelector("#valuetext").value;
-                    val = number(val);
+                    val = Number(val);
 
                     let id = "arrdiv" + ind;
                     let seldiv = document.querySelector("#" + id);
-                    setdiv.innerHTML = String(val); 
+                    seldiv.innerHTML = String(val); 
 
                     anime({ 
                         targets: seldiv,
@@ -149,7 +149,7 @@
                     let showd = document.querySelector("#showdiv");
                     showd.addEventListener("mouseenter", (e) =>
                     {
-                        showd.classlist.add("alert","alert-warning");
+                        showd.classList.add("alert","alert-warning");
                     }
                     );
 
